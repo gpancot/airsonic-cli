@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import requests
-import config_airsonic as config
+import config
 
 # Genera l'URL per l'API
 # rest_url = f'{config.server_url}/ping.view'
