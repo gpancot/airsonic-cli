@@ -1,4 +1,5 @@
-# airsonic_refresh, send refrshmedia for airsonic/airsonic-advanced
+# airsonic_refresh.py
+send refrshmedia for airsonic/airsonic-advanced
 
 
 
