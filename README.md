@@ -1,4 +1,4 @@
-# Command for airsonic/airsonic-advanced
+# airsonic_refresh, send refrshmedia for airsonic/airsonic-advanced
 
 
 
