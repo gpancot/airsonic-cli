@@ -1,5 +1,5 @@
 # airsonic_refresh.py
-send refrshmedia for airsonic/airsonic-advanced
+send startScan for airsonic/airsonic-advanced
 
 
 
