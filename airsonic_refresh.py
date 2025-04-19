@@ -15,17 +15,21 @@ params = {
     'f': 'json'  # Formato della risposta
 }
 
-# Invio della richiesta per avviare la scansione delle cartelle multimediali
-response = requests.get(rest_url, params=params)
+try:
+  # Invio della richiesta per avviare la scansione delle cartelle multimediali
+  response = requests.get(rest_url, params=params)
 
-if response.status_code != 200:
-    print(f'Errore durante la connect: {response.json()}')
-    exit()
+  if response.status_code != 200:
+      print(f'Errore durante la connect: {response.json()}')
+      exit()
 
-resp_js = response.json()
-resp_status = resp_js['subsonic-response']['status']
+  resp_js = response.json()
+  resp_status = resp_js['subsonic-response']['status']
 
-if resp_status == 'failed':
-    print(f'failed: {resp_js['subsonic-response']['error']}')
-else:
-    print(resp_js['subsonic-response'])
+  if resp_status == 'failed':
+      print(f'failed: {resp_js['subsonic-response']['error']}')
+  else:
+      print(resp_js['subsonic-response'])
+
+except requests.exceptions.RequestException:
+    print(f'Connection refused {rest_url}')
